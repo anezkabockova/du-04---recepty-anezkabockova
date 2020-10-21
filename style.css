@@ -43,8 +43,8 @@ notebook/pc:
 
 .doporucujeme {
     display: flex;
-    flex-direction: column;
     color: white;
+    margin: 0 auto;
 }
 
 .hlavni-recept {
@@ -58,7 +58,6 @@ notebook/pc:
 }
 
 .sloupec {
-    flex-direction: column;
     display: flex;
     flex-grow: 1;
 }
@@ -103,32 +102,114 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
 }
 
 /* pro mobily */
 
-@media screen and (min-height: 320px) and (max-width:480px) {
+@media screen and (max-width:767px) {
 
     .hlavni-recept {
         min-height: 200px;
-        min-width: 320px;
-        max-width: 480px;
-        flex-grow: 2;
-        padding: 0.5rem;
+    }
+    .hlavni-recept h2 {
         font-size: 1.75rem;
     }
 
     .recept {
-        min-width: 320px;
-        max-width: 480px;
         flex-grow: 1;
-        padding: 0.5rem;
         min-height: 90px;
-        font-size: 1.2rem;
-
     }
 
+    .recept-meta, 
+    .recept-nazev {
+        padding: 0.5rem;
+    }
+
+    h2 {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .sloupec {
+        flex-direction: column;
+    }
+
+    .doporucujeme {
+        flex-direction: column;
+    }
+}
+
+/* pro tablet */
+@media screen and (min-width:768px) and (max-width:1025px) {
+
+    .hlavni-recept {
+        min-height: 250px;
+    }
+
+    .hlavni-recept h2 {
+        font-size: 2rem;
+    }
+
+    .recept {
+        flex-grow: 1;
+        min-height: 150px;
+        width: 50%;
+    }  
+
+    .doporucujeme {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recept-kategorie, 
+    .recept-komentare {
+        padding: 1.25rem;
+    }
+
+    .sloupec {
+        flex-direction: row;
+    }
+    h2 {
+        padding: 1.25rem;
+        font-size: 1.5rem;
+
+    }
+}
+
+/* pro desktop */
+@media screen and (min-width:1025px) {
+    
+    .hlavni-recept {
+        min-height: 400px;
+    }
+
+    .hlavni-recept h2 {
+        font-size: 3rem;
+    }
+    .recept {
+        flex-grow: 1;
+        min-height: 200px;
+    }  
+
+    .doporucujeme {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .recept-kategorie, 
+    .recept-komentare {
+        padding: 1.25rem;
+    }
+
+    .sloupec {
+        flex-direction: column;
+    }
+    h2 {
+        padding: 1.25rem;
+        font-size: 1.75rem;
+
+    }
 }
 
 
