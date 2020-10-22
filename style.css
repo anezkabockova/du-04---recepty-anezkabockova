@@ -166,10 +166,7 @@ h2 {
     .recept-komentare {
         padding: 1.25rem;
     }
-.kontejner {
-    display: flex;
-    flex-direction: column;
-}
+
     .sloupec {
         flex-direction: row;
     }
